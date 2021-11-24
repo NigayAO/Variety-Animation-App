@@ -21,7 +21,6 @@ class MainViewController: UIViewController {
     
     private let animations = AnimationModel.getAnimation()
     private var count = 0
-    private var isFirtsStart = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
