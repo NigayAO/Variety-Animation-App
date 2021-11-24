@@ -25,20 +25,24 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                initialSetup(animations[count])
+        initialSetup(animations[count])
     }
     
     @IBAction func springButtonPressed(_ sender: SpringButton) {
-        let animation = animations[count]
-        buttonLabel.setTitle("Run \(animations[updateCount()].present)", for: .normal)
-        springView.animation = animation.present
-        springView.curve = animation.curve
-        springView.force = animation.force
-        springView.duration = animation.duration
-        springView.delay = animation.delay
-        springView.animate()
-        updateCount()
-        initialSetup(animation)
+        if count < animations.count {
+            let animation = animations[count]
+            buttonLabel.setTitle("Run \(animations[count + 1].present)", for: .normal)
+            springView.animation = animation.present
+            springView.curve = animation.curve
+            springView.force = animation.force
+            springView.duration = animation.duration
+            springView.delay = animation.delay
+            springView.animate()
+            initialSetup(animation)
+            count += 1
+        } else {
+            count = 0
+        }
     }
     
     private func initialSetup(_ animation: AnimationModel) {
@@ -48,15 +52,5 @@ class MainViewController: UIViewController {
         durationLabel.text = "Duration: \(String(format: "%.2f", animation.duration))"
         delayLabel.text = "Delay: \(String(format: "%.2f", animation.delay))"
     }
-    
-    private func updateCount() -> Int {
-        if count < animations.count {
-            count += 1
-        } else {
-            count = 0
-        }
-        return count
-    }
-    
 }
 
