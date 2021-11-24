@@ -19,36 +19,26 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var buttonLabel: SpringButton!
     
-    private let animation = AnimationModel.getAnimation()
+    private let animations = AnimationModel.getAnimation()
+    private var count = 0
     private var isFirtsStart = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetup(animation)
+                initialSetup(animations[count])
     }
     
     @IBAction func springButtonPressed(_ sender: SpringButton) {
-        isFirtsStart = false
-        let newAnimation = AnimationModel.getAnimation()
-        buttonLabel.setTitle("Run \(newAnimation.present)", for: .normal)
-        
-        if isFirtsStart {
-            springView.animation = animation.present
-            springView.curve = animation.curve
-            springView.force = animation.force
-            springView.duration = animation.duration
-            springView.delay = animation.delay
-            springView.animate()
-        } else {
-            initialSetup(newAnimation)
-            springView.animation = newAnimation.present
-            springView.curve = newAnimation.curve
-            springView.force = newAnimation.force
-            springView.duration = newAnimation.duration
-            springView.delay = newAnimation.delay
-            springView.animate()
-        }
-
+        let animation = animations[count]
+        buttonLabel.setTitle("Run \(animations[updateCount()].present)", for: .normal)
+        springView.animation = animation.present
+        springView.curve = animation.curve
+        springView.force = animation.force
+        springView.duration = animation.duration
+        springView.delay = animation.delay
+        springView.animate()
+        updateCount()
+        initialSetup(animation)
     }
     
     private func initialSetup(_ animation: AnimationModel) {
@@ -57,6 +47,15 @@ class MainViewController: UIViewController {
         forceLabel.text = "Force: \(String(format: "%.2f", animation.force))"
         durationLabel.text = "Duration: \(String(format: "%.2f", animation.duration))"
         delayLabel.text = "Delay: \(String(format: "%.2f", animation.delay))"
+    }
+    
+    private func updateCount() -> Int {
+        if count < animations.count {
+            count += 1
+        } else {
+            count = 0
+        }
+        return count
     }
     
 }
