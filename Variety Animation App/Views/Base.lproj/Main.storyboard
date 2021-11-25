@@ -19,54 +19,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ZH-S4-VlS" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="40" y="78" width="310" height="217"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jGr-hy-b3S">
-                                        <rect key="frame" x="8" y="20" width="294" height="177"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-bI-0li">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="27.333333333333332"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIH-lI-Y24">
-                                                <rect key="frame" x="0.0" y="37.333333333333343" width="294" height="27.333333333333329"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmZ-Et-548">
-                                                <rect key="frame" x="0.0" y="74.666666666666657" width="294" height="27.666666666666671"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-xU-NPK">
-                                                <rect key="frame" x="0.0" y="112.33333333333334" width="294" height="27.333333333333343"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5X-jn-Aaa">
-                                                <rect key="frame" x="0.0" y="149.66666666666666" width="294" height="27.333333333333343"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2F-bI-0li">
+                                        <rect key="frame" x="8" y="8" width="294" height="201"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3803921938" green="0.65882354970000001" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="K2F-bI-0li" secondAttribute="bottom" constant="8" id="N8u-D2-cvl"/>
+                                    <constraint firstAttribute="trailing" secondItem="K2F-bI-0li" secondAttribute="trailing" constant="8" id="S34-xF-XKf"/>
                                     <constraint firstAttribute="height" constant="217" id="TmN-qL-xFA"/>
-                                    <constraint firstItem="jGr-hy-b3S" firstAttribute="top" secondItem="7ZH-S4-VlS" secondAttribute="top" constant="20" id="gTy-je-U1q"/>
-                                    <constraint firstAttribute="trailing" secondItem="jGr-hy-b3S" secondAttribute="trailing" constant="8" id="mbf-tY-OyU"/>
-                                    <constraint firstAttribute="bottom" secondItem="jGr-hy-b3S" secondAttribute="bottom" constant="20" id="uWI-Hq-4EN"/>
-                                    <constraint firstItem="jGr-hy-b3S" firstAttribute="leading" secondItem="7ZH-S4-VlS" secondAttribute="leading" constant="8" id="w3C-c9-d9k"/>
+                                    <constraint firstItem="K2F-bI-0li" firstAttribute="leading" secondItem="7ZH-S4-VlS" secondAttribute="leading" constant="8" id="tXO-MH-uwk"/>
+                                    <constraint firstItem="K2F-bI-0li" firstAttribute="top" secondItem="7ZH-S4-VlS" secondAttribute="top" constant="8" id="twu-tc-rq2"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -102,13 +69,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationLabel" destination="K2F-bI-0li" id="bdZ-hL-WJ8"/>
                         <outlet property="buttonLabel" destination="fkj-w0-LNT" id="ZA3-1I-XcW"/>
                         <outlet property="springView" destination="7ZH-S4-VlS" id="ygo-IF-zgL"/>
-                        <outletCollection property="labels" destination="K2F-bI-0li" collectionClass="NSMutableArray" id="AuH-gj-pCi"/>
-                        <outletCollection property="labels" destination="vIH-lI-Y24" collectionClass="NSMutableArray" id="eJc-ep-Waj"/>
-                        <outletCollection property="labels" destination="bmZ-Et-548" collectionClass="NSMutableArray" id="5Q3-CT-of9"/>
-                        <outletCollection property="labels" destination="ur0-xU-NPK" collectionClass="NSMutableArray" id="TVR-LN-ZSf"/>
-                        <outletCollection property="labels" destination="T5X-jn-Aaa" collectionClass="NSMutableArray" id="Ife-Ij-B3Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

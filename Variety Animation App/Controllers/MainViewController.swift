@@ -10,44 +10,29 @@ import Spring
 class MainViewController: UIViewController {
     
     @IBOutlet weak var springView: SpringView!
-
-    @IBOutlet var labels: [UILabel]?    
+    
+    @IBOutlet weak var animationLabel: UILabel!
     @IBOutlet weak var buttonLabel: SpringButton!
     
-    private let animation = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetup(animation)
+        animationLabel.text = animation.description
     }
     
     @IBAction func springButtonPressed(_ sender: SpringButton) {
-        let newAnimation = Animation.getAnimation()
-        buttonLabel.setTitle("Run \(newAnimation.present)", for: .normal)
-        springView.animation = newAnimation.present
-        springView.curve = newAnimation.curve
-        springView.force = CGFloat(newAnimation.force)
-        springView.duration = CGFloat(newAnimation.duration)
-        springView.delay = CGFloat(newAnimation.delay)
+        animationLabel.text = animation.description
+        
+        springView.animation = animation.present
+        springView.curve = animation.curve
+        springView.force = CGFloat(animation.force)
+        springView.duration = CGFloat(animation.duration)
+        springView.delay = CGFloat(animation.delay)
         springView.animate()
-        initialSetup(newAnimation)
-    }
-    
-    private func initialSetup(_ animation: Animation) {
-        for item in labels! {
-            switch item.tag {
-            case 0:
-                item.text = animation.descriptionPresent
-            case 1:
-                item.text = animation.descriptionCurve
-            case 2:
-                item.text = animation.descriptionForce
-            case 3:
-                item.text = animation.descriptionDuration
-            default:
-                item.text = animation.descriptionDelay
-            }
-        }
+        
+        animation = Animation.getAnimation()
+        buttonLabel.setTitle("Run \(animation.present)", for: .normal)
     }
 }
 

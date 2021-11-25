@@ -7,24 +7,18 @@
 struct Animation {
     let present: String
     let curve: String
-    let force: Float
-    let duration: Float
-    let delay: Float
+    let force: Double
+    let duration: Double
+    let delay: Double
     
-    var descriptionPresent: String {
-        "Present: \(present)"
-    }
-    var descriptionCurve: String {
-        "Curve: \(curve)"
-    }
-    var descriptionForce: String {
-        "Force: \(String(format: "%.2f", force))"
-    }
-    var descriptionDuration: String {
-        "Duration: \(String(format: "%.2f", duration))"
-    }
-    var descriptionDelay: String {
-        "Delay: \(String(format: "%.2f", delay))"
+    var description: String {
+        """
+        Present: \(present)
+        Curve: \(curve)
+        Force: \(String(format: "%.2f", force))
+        Duration: \(String(format: "%.2f", duration))
+        Delay: \(String(format: "%.2f", delay))
+        """
     }
     
     static func getAnimation() -> Animation {
@@ -32,9 +26,9 @@ struct Animation {
         
         let animations = dataManager.allAnimations
         let curves = dataManager.allCurves
-        let force = Float.random(in: 1...2)
-        let duration = Float.random(in: 1...2)
-        let delay = Float.random(in: 0.1...0.3)
+        let force = Double.random(in: 1...2)
+        let duration = Double.random(in: 1...2)
+        let delay = Double.random(in: 0.1...0.3)
         
         let animaion = Animation(present: animations.randomElement()?.rawValue ?? "",
                                  curve: curves.randomElement()?.rawValue ?? "",
